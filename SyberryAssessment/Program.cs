@@ -9,7 +9,7 @@ string GameIteration(string input)
     int m, n;
 
     // parse lines separated by '_'
-    GameFieldOperator.ParseData(input, lines);
+    GameFieldOperator.ParseData(input, out lines);
 
     // set m, n from input
     GameFieldOperator.SetDimensions(lines, out m, out n);
@@ -26,7 +26,7 @@ string GameIteration(string input)
 
     string answer;
     // form answer line
-    GameFieldOperator.FormAnswer(newUniverse, m, n, answer);
+    GameFieldOperator.FormAnswer(newUniverse, m, n, out answer);
 
     return answer;
 }

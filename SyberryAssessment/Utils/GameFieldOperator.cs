@@ -8,7 +8,7 @@ namespace SyberryAssessment.Utils
 {
     internal static class GameFieldOperator
     {
-        public static void ParseData(string input, string[] lines)
+        public static void ParseData(string input, out string[] lines)
         {
             lines = input.Split('_');
         }
@@ -68,8 +68,10 @@ namespace SyberryAssessment.Utils
             }
         }
 
-        public static void FormAnswer(int[,] newUniverse, int m, int n, string answer)
+        public static void FormAnswer(int[,] newUniverse, int m, int n, out string answer)
         {
+            answer = "";
+
             for (int i = 1; i <= m; i++)
             {
                 if (!string.IsNullOrEmpty(answer))
